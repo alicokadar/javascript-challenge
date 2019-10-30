@@ -5,15 +5,7 @@ var tableData = data;
 let tbody = d3.select("tbody");
 
 tableData.forEach((sightings) => {
-    const row = tbody.append("tr")
-        .on("mouseover", function(d){
-            d3.select(this)
-                .style("background-color", "orange");
-        })
-        .on("mouseout", function(d){
-			d3.select(this)
-				.style("background-color","transparent");
-		});
+    const row = tbody.append("tr");
     for (key in sightings){
         const cell = tbody.append("td");
         cell.text(sightings[key]);
